@@ -1,9 +1,8 @@
-import { defineNuxtConfig } from 'nuxt'
-
 export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt'
   ],
+
   pwa: {
     manifest: {
       name: 'My Awesome PWA',
@@ -35,5 +34,7 @@ export default defineNuxtConfig({
         }
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2024-07-05'
 })
