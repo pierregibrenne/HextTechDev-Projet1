@@ -5,8 +5,8 @@ export default defineNuxtConfig({
 
   pwa: {
     manifest: {
-      name: 'My Awesome PWA',
-      short_name: 'MyPWA',
+      name: 'Driver',
+      short_name: 'Drive',
       lang: 'en',
       start_url: '/',
       display: 'standalone',
@@ -14,12 +14,12 @@ export default defineNuxtConfig({
       theme_color: '#4DBA87',
       icons: [
         {
-          src: '/icon-192x192.png',
+          src: './public/icon-192x192.png',
           sizes: '192x192',
           type: 'image/png'
         },
         {
-          src: '/icon-512x512.png',
+          src: './public/icon-512x512.png',
           sizes: '512x512',
           type: 'image/png'
         }
