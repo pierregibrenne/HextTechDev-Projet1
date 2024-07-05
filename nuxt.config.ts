@@ -1,8 +1,20 @@
 export default defineNuxtConfig({
-  modules: [
-    '@vite-pwa/nuxt'
+  modules: [    
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    '@vite-pwa/nuxt',
   ],
-
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
   pwa: {
     manifest: {
       name: 'Driver',
@@ -26,8 +38,9 @@ export default defineNuxtConfig({
       ]
     },
     workbox: {
-      navigateFallback:'/'
-    },
+      globPatterns: [
+        '**/*.{js,css,html,png,svg,jpg,json,webmanifest}'
+      ],    },
     devOptions:{
       enabled:true,
       type:"module"
